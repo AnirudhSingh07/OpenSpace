@@ -1,0 +1,448 @@
+body {
+    background: url(https://pixabay.com/videos/earth-animation-revolution-planet-4788/);
+  }
+  
+  .centered {
+      padding-top: 200px;
+      text-align: center;
+  }
+  
+  .maindiv{
+   padding: auto;
+   background-color: red;
+
+  }
+  .secret-text {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #000;
+  }
+
+  .homediv{
+   
+    color:white;
+    padding: 30px;
+    width: 1400px;
+    height: 400px;
+    
+
+  }
+  
+  h1{
+    color: white;
+  }
+
+
+
+
+  .bg {
+    background: url(https://wallpapers.com/images/hd/giant-stars-4k-space-q03wbnsie2ul47hh.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+
+.bg:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+@keyframes sf-fly-by-1 {
+    from {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(0);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-2 {
+    from {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-3 {
+    from {
+        transform: translateZ(-1800px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+}
+.star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: 600px;
+    -webkit-perspective: 600px;
+    z-index: -1;
+}
+.star-field .layer {
+    box-shadow: -411px -476px #cccccc, 777px -407px #d4d4d4, -387px -477px #fcfcfc, -91px -235px #d4d4d4, 491px -460px #f7f7f7, 892px -128px #f7f7f7, 758px -277px #ededed, 596px 378px #cccccc, 647px 423px whitesmoke, 183px 389px #c7c7c7,
+        524px -237px #f0f0f0, 679px -535px #e3e3e3, 158px 399px #ededed, 157px 249px #ededed, 81px -450px #ebebeb, 719px -360px #c2c2c2, -499px 473px #e8e8e8, -158px -349px #d4d4d4, 870px -134px #cfcfcf, 446px 404px #c2c2c2,
+        440px 490px #d4d4d4, 414px 507px #e6e6e6, -12px 246px #fcfcfc, -384px 369px #e3e3e3, 641px -413px #fcfcfc, 822px 516px #dbdbdb, 449px 132px #c2c2c2, 727px 146px #f7f7f7, -315px -488px #e6e6e6, 952px -70px #e3e3e3,
+        -869px -29px #dbdbdb, 502px 80px #dedede, 764px 342px #e0e0e0, -150px -380px #dbdbdb, 654px -426px #e3e3e3, -325px -263px #c2c2c2, 755px -447px #c7c7c7, 729px -177px #c2c2c2, -682px -391px #e6e6e6, 554px -176px #ededed,
+        -85px -428px #d9d9d9, 714px 55px #e8e8e8, 359px -285px #cfcfcf, -362px -508px #dedede, 468px -265px #fcfcfc, 74px -500px #c7c7c7, -514px 383px #dbdbdb, 730px -92px #cfcfcf, -112px 287px #c9c9c9, -853px 79px #d6d6d6,
+        828px 475px #d6d6d6, -681px 13px #fafafa, -176px 209px #f0f0f0, 758px 457px #fafafa, -383px -454px #ededed, 813px 179px #d1d1d1, 608px 98px whitesmoke, -860px -65px #c4c4c4, -572px 272px #f7f7f7, 459px 533px #fcfcfc,
+        624px -481px #e6e6e6, 790px 477px #dedede, 731px -403px #ededed, 70px -534px #cccccc, -23px 510px #cfcfcf, -652px -237px whitesmoke, -690px 367px #d1d1d1, 810px 536px #d1d1d1, 774px 293px #c9c9c9, -362px 97px #c2c2c2,
+        563px 47px #dedede, 313px 475px #e0e0e0, 839px -491px #e3e3e3, -217px 377px #d4d4d4, -581px 239px #c2c2c2, -857px 72px #cccccc, -23px 340px #dedede, -837px 246px white, 170px -502px #cfcfcf, 822px -443px #e0e0e0, 795px 497px #e0e0e0,
+        -814px -337px #cfcfcf, 206px -339px #f2f2f2, -779px 108px #e6e6e6, 808px 2px #d4d4d4, 665px 41px #d4d4d4, -564px 64px #cccccc, -380px 74px #cfcfcf, -369px -60px #f7f7f7, 47px -495px #e3e3e3, -383px 368px #f7f7f7, 419px 288px #d1d1d1,
+        -598px -50px #c2c2c2, -833px 187px #c4c4c4, 378px 325px whitesmoke, -703px 375px #d6d6d6, 392px 520px #d9d9d9, -492px -60px #c4c4c4, 759px 288px #ebebeb, 98px -412px #c4c4c4, -911px -277px #c9c9c9;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4px;
+    width: 4px;
+    border-radius: 2px;
+}
+.star-field .layer:nth-child(1) {
+    animation: sf-fly-by-1 5s linear infinite;
+}
+.star-field .layer:nth-child(2) {
+    animation: sf-fly-by-2 5s linear infinite;
+}
+.star-field .layer:nth-child(3) {
+    animation: sf-fly-by-3 5s linear infinite;
+}
+
+/*
+.milkyway{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: yellow;
+    position: ;
+}
+*/
+.buttondiv{
+    
+    border-radius: 40px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 150px;
+    
+    backdrop-filter: blur();
+    
+}
+.btn{
+    height: fit-content;
+    background-color: darkgray;
+    margin: auto;
+
+    
+}
+
+a:hover{
+    background-color:white);
+}
+
+.accdiv{
+    border-radius: 50px;
+background: linear-gradient(315deg, #280058, #21004a);
+box-shadow:  -27px -27px 49px #0f0021,
+             27px 27px 49px #3b0083;
+    height: 250px;
+    width: 550px;
+    padding: 20px;
+    margin-left: 100px;
+    padding-left: 20px;
+    margin-top: 80px;
+    text-decoration-color: #c2c2c2;
+    
+
+}
+
+#headin{
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.accdiv2{
+    border-radius: 50px;
+background: linear-gradient(315deg, #280058, #21004a);
+box-shadow:  -27px -27px 49px #0f0021,
+             27px 27px 49px #3b0083;
+    height: 270px;
+    width: 550px;
+    padding: 20px;
+    margin-left: 100px;
+    margin-top: 90px;
+
+}
+
+.backg{
+    
+    width: auto;
+    height: 100%;
+}
+.backg {
+    background-color: #250052;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+.sparkle-button {
+    --active: 0;
+    --bg: radial-gradient(
+              40% 50% at center 100%,
+              hsl(270 calc(var(--active) * 97%) 72% / var(--active)),
+              transparent
+          ),
+          radial-gradient(
+              80% 100% at center 120%,
+              hsl(260 calc(var(--active) * 97%) 70% / var(--active)),
+              transparent
+          ),
+          hsl(260 calc(var(--active) * 97%) calc((var(--active) * 44%) + 12%));
+    background: var(--bg);
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 0;
+    cursor: pointer;
+    padding: 1em 1em;
+    display:flex;
+    align-items: center;
+    gap: 0.25em;
+    white-space: nowrap;
+    border-radius: 100px;
+    position: relative;
+    box-shadow: 0 0 calc(var(--active) * 3em) calc(var(--active) * 1em) hsl(260 97% 61% / 0.75),
+          0 0em 0 0 hsl(260 calc(var(--active) * 97%) calc((var(--active) * 50%) + 30%)) inset,
+          0 -0.05em 0 0 hsl(260 calc(var(--active) * 97%) calc(var(--active) * 60%)) inset;
+    transition: box-shadow var(--transition), scale var(--transition), background var(--transition);
+    scale: calc(1 + (var(--active) * 0.1));
+    transition: .3s;
+  }
+  
+  .sparkle-button:active {
+    scale: 1;
+    transition: .3s;
+  }
+  
+  .sparkle path {
+    color: hsl(0 0% calc((var(--active, 0) * 70%) + var(--base)));
+    transform-box: fill-box;
+    transform-origin: center;
+    fill: currentColor;
+    stroke: currentColor;
+    animation-delay: calc((var(--transition) * 1.5) + (var(--delay) * 1s));
+    animation-duration: 0.6s;
+    transition: color var(--transition);
+  }
+  
+  .sparkle-button:is(:hover, :focus-visible) path {
+    animation-name: bounce;
+  }
+  
+  @keyframes bounce {
+    35%, 65% {
+      scale: var(--scale);
+    }
+  }
+  
+  .sparkle path:nth-of-type(1) {
+    --scale: 0.5;
+    --delay: 0.1;
+    --base: 40%;
+  }
+  
+  .sparkle path:nth-of-type(2) {
+    --scale: 1.5;
+    --delay: 0.2;
+    --base: 20%;
+  }
+  
+  .sparkle path:nth-of-type(3) {
+    --scale: 2.5;
+    --delay: 0.35;
+    --base: 30%;
+  }
+  
+  .sparkle-button:before {
+    content: "";
+    position: absolute;
+    inset: -0.2em;
+    z-index: -1;
+    border: 0.25em solid hsl(260 97% 50% / 0.5);
+    border-radius: 100px;
+    opacity: var(--active, 0);
+    transition: opacity var(--transition);
+  }
+  
+  .spark {
+    position: absolute;
+    inset: 0;
+    border-radius: 100px;
+    rotate: 0deg;
+    overflow: hidden;
+    mask: linear-gradient(white, transparent 50%);
+    animation: flip calc(var(--spark) * 2) infinite steps(2, end);
+  }
+  
+  @keyframes flip {
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  .spark:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    aspect-ratio: 1;
+    top: 0%;
+    left: 50%;
+    z-index: -1;
+    translate: -50% -15%;
+    rotate: 0;
+    transform: rotate(-90deg);
+    opacity: calc((var(--active)) + 0.4);
+    background: conic-gradient(
+          from 0deg,
+          transparent 0 340deg,
+          white 360deg
+      );
+    transition: opacity var(--transition);
+    animation: rotate var(--spark) linear infinite both;
+  }
+  
+  .spark:after {
+    content: "";
+    position: absolute;
+    inset: var(--cut);
+    border-radius: 100px;
+  }
+  
+  .backdrop {
+    position: absolute;
+    inset: var(--cut);
+    background: var(--bg);
+    border-radius: 100px;
+    transition: background var(--transition);
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(90deg);
+    }
+  }
+  
+  @supports(selector(:has(:is(+ *)))) {
+    body:has(button:is(:hover, :focus-visible)) {
+      --active: 1;
+      --play-state: running;
+    }
+  
+    .bodydrop {
+      display: none;
+    }
+  }
+  
+  .sparkle-button:is(:hover, :focus-visible) ~ :is(.bodydrop, .particle-pen) {
+    --active: 1;
+    --play-state: runnin;
+  }
+  
+  .sparkle-button:is(:hover, :focus-visible) {
+    --active: 1;
+    --play-state: running;
+  }
+  
+  .sp {
+    position: relative;
+  }
+  
+  .particle-pen {
+    position: absolute;
+    width: 200%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    -webkit-mask: radial-gradient(white, transparent 65%);
+    z-index: -1;
+    opacity: var(--active, 0);
+    transition: opacity var(--transition);
+  }
+  
+  .particle {
+    fill: white;
+    width: calc(var(--size, 0.25) * 1rem);
+    aspect-ratio: 1;
+    position: absolute;
+    top: calc(var(--y) * 1%);
+    left: calc(var(--x) * 1%);
+    opacity: var(--alpha, 1);
+    animation: float-out calc(var(--duration, 1) * 1s) calc(var(--delay) * -1s) infinite linear;
+    transform-origin: var(--origin-x, 1000%) var(--origin-y, 1000%);
+    z-index: -1;
+    animation-play-state: var(--play-state, paused);
+  }
+  
+  .particle path {
+    fill: hsl(0 0% 90%);
+    stroke: none;
+  }
+  
+  .particle:nth-of-type(even) {
+    animation-direction: reverse;
+  }
+  
+  @keyframes float-out {
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  .text {
+    translate: 2% -6%;
+    letter-spacing: 0.01ch;
+    background: linear-gradient(90deg, hsl(0 0% calc((var(--active) * 100%) + 65%)), hsl(0 0% calc((var(--active) * 100%) + 26%)));
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background var(--transition);
+  }
+  
+  .sparkle-button svg {
+    inline-size: 1.25em;
+    translate: -25% -5%;
+  }
+
+
+  .accdiv2 ul{
+    color: white;
+    text-decoration: solid;
+    text-shadow: #0f0021;
+    text-decoration-color: #3b0083;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+  }

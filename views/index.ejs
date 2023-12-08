@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+  <ul id="messages">
+    <% messages.forEach(message => { %>
+      <li><%= message.name %>: <%= message.message %></li>
+    <% }) %>
+  </ul>
+  <input id="messageInput" autocomplete="off"><button onclick="sendMessage()">Send</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <!-- Socket.io and JavaScript code -->
+
+  <script>
+    const socket = io();
+
+    function appendMessage(msg) {
+      const messages = document.getElementById('messages');
+      const item = document.createElement('li');
+      item.textContent = msg;
+      messages.appendChild(item);
+    }
+
+    socket.on('chat message', function(msg) {
+      appendMessage(msg.name + ': ' + msg.message);
+    });
+
+    function sendMessage() {
+      const messageInput = document.getElementById('messageInput');
+      const message = messageInput.value;
+      socket.emit('chat message', { name: 'User', message: message });
+      messageInput.value = '';
+      appendMessage('You: ' + message);
+    }
+  </script>
+
+<%- include('partials/footer') %>
